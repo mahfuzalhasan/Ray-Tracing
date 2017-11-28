@@ -1,0 +1,11 @@
+OBJ = RayTrace.o
+INC = -I "./"
+
+RayTrace: $(OBJ)
+	g++ $(OBJ) -o RayTrace.exe
+	rm -f $(OBJ)
+RayTrace.o:
+	g++ -c RayTrace.cpp $(INC)
+
+clean:
+	rm -f $(OBJ) RayTrace
